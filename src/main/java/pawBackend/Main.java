@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PznuJavaApplication {
+public class Main {
 
     public static void main(String[] args) {
-        SpringApplication.run(PznuJavaApplication.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
 }

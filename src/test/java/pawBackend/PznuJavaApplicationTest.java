@@ -1,5 +1,0 @@
-package pawBackend;
-
-class PznuJavaApplicationTest {
-
-}
