@@ -10,13 +10,15 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "PZNU_USERS")
+@Table(name = "uzytkownik")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer uzytkownik_id;
 
-    private String login;
+    private String login, haslo, imie, nazwisko, email;
+
+    private boolean czy_pracownik;
 
 }

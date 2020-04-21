@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @SpringBootTest
 class UserControllerTest {
-    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+/*    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     @Autowired
     MockMvc mockMvc;
@@ -53,6 +53,6 @@ class UserControllerTest {
         User user = OBJECT_MAPPER.readValue(storyResult.getResponse().getContentAsString(), User.class);
 
         assertEquals(new User(2, "testuser2"), user);
-    }
+    }*/
 
 }

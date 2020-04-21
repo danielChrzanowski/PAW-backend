@@ -14,6 +14,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/users")
+    @CrossOrigin(origins = "http://localhost:4200")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
@@ -28,12 +29,13 @@ public class UserController {
         return userService.getUserByLogin(login);
     }
 
-    @PostMapping("/add")
+    @PostMapping("/addUser")
+    @CrossOrigin(origins = "http://localhost:4200")
     public void addUser(@RequestBody User user) {
         userService.addUser(user);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deleteUser/{id}")
     public void deleteUser(@PathVariable int id) {
         userService.deleteUser(id);
     }
