@@ -4,6 +4,7 @@ target/
 !**/src/main/**
 !**/src/test/**
 application.properties
+certificate.p12
 
 ### STS ###
 .apt_generated

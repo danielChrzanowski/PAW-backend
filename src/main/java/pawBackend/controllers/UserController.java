@@ -14,7 +14,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/users")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://localhost:4200")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @PostMapping("/addUser")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://localhost:4200")
     public void addUser(@RequestBody User user) {
         userService.addUser(user);
     }
