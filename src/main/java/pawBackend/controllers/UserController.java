@@ -7,7 +7,7 @@ import pawBackend.services.UserService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://localhost:4200")
 @RestController
 public class UserController {
 

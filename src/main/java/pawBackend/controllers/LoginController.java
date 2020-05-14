@@ -9,7 +9,7 @@ import pawBackend.services.UserService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Base64;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://localhost:4200")
 @RestController
 public class LoginController {
 
