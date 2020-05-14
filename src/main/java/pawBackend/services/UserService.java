@@ -1,6 +1,9 @@
 package pawBackend.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import pawBackend.model.User;
 import pawBackend.repositories.UserRepository;
@@ -10,7 +13,7 @@ import java.util.List;
 
 
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
@@ -24,10 +27,6 @@ public class UserService {
         return userRepository.findById(id).orElse(null);
     }
 
-    public User getUserByLogin(String login) {
-        return userRepository.findByLogin(login);
-    }
-
     public void addUser(User user) {
         userRepository.save(user);
     }
@@ -36,4 +35,12 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
+        User user = userRepository.findByLogin(login);
+        if (user != null) {
+            return user;
+        }
+        throw new UsernameNotFoundException("Nie znaleziono użytkownika: " + login);
+    }
 }

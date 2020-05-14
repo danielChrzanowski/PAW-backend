@@ -7,6 +7,7 @@ import pawBackend.services.UserService;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 public class UserController {
 
@@ -14,7 +15,6 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/users")
-    @CrossOrigin(origins = "https://localhost:4200")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
@@ -24,13 +24,7 @@ public class UserController {
         return userService.getUserById(id);
     }
 
-    @GetMapping("/userByLogin/{login}")
-    public User getUserByLogin(@PathVariable String login) {
-        return userService.getUserByLogin(login);
-    }
-
     @PostMapping("/addUser")
-    @CrossOrigin(origins = "https://localhost:4200")
     public void addUser(@RequestBody User user) {
         userService.addUser(user);
     }
