@@ -26,6 +26,14 @@ public class User implements UserDetails {
 
     private boolean czy_pracownik;
 
+    public User(Integer uzytkownik_id, String imie, String nazwisko, String email, boolean czy_pracownik) {
+        this.uzytkownik_id = uzytkownik_id;
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.email = email;
+        this.czy_pracownik = czy_pracownik;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
