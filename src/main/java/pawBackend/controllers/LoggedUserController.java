@@ -8,7 +8,7 @@ import pawBackend.model.LoggedUser;
 import pawBackend.services.LoggedUserService;
 
 @RestController
-public class LoggerUserController {
+public class LoggedUserController {
     @Autowired
     LoggedUserService loggedUserService;
 
