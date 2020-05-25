@@ -17,9 +17,9 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-    @GetMapping("/getAllOrders")
+    @GetMapping("/getTodayOrders")
     public List<Order> getAllOrders() {
-        return orderService.getAllOrders();
+        return orderService.getTodayOrders();
     }
 
     @GetMapping("/getClientOrders/{id}")
