@@ -16,12 +16,10 @@ public class OrderService {
     OrderRepository orderRepository;
 
     public List<Order> getTodayOrders() {
-        //List<Order> orders = new ArrayList<>();
         Date date=new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        System.out.println(formatter.format(date));
+        //System.out.println(formatter.format(date));
         return orderRepository.getTodayOrders(formatter.format(date));
-        //  return orders;
     }
 
     public List<Order> getClientOrders(int id) {
