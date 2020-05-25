@@ -3,6 +3,7 @@ package pawBackend.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import pawBackend.model.Order;
 import pawBackend.services.OrderService;
@@ -17,6 +18,13 @@ public class OrderController {
     OrderService orderService;
 
     @GetMapping("/getAllOrders")
-    public List<Order> getAllOrders(){return orderService.getAllOrders();}
+    public List<Order> getAllOrders() {
+        return orderService.getAllOrders();
+    }
+
+    @GetMapping("/getClientOrders/{id}")
+    public List<Order> getClientOrders(@PathVariable int id) {
+        return orderService.getClientOrders(id);
+    }
 
 }

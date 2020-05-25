@@ -19,4 +19,8 @@ public class OrderService {
         return orders;
     }
 
+    public List<Order> getClientOrders(int id) {
+       return orderRepository.getClientOrders(id);
+    }
+
 }

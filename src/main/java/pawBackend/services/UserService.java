@@ -23,11 +23,6 @@ public class UserService implements UserDetailsService {
         return users;
     }
 
-    /*
-    public User getUserById(int id) {
-        return userRepository.findById(id).orElse(null);
-    }*/
-
     public void addUser(User user) {
         userRepository.save(user);
     }

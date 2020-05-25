@@ -10,11 +10,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "zamowienie")
+@Table(name = "zamowienie",schema = "sky-33_Daniel")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer zamowienie_id;
+
+    private Integer uzytkownik_id;
 
     private String data, stan;
 
