@@ -27,6 +27,10 @@ public class UserService implements UserDetailsService {
         userRepository.save(user);
     }
 
+/*    public User getUserById(int id) {
+        return userRepository.findById(id).orElse(null);
+    }*/
+
     public void changePassword(User user) {
         int id = user.getUzytkownik_id();
         String newPassword = user.getPassword();

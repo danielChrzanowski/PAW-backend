@@ -18,6 +18,11 @@ public class UserController {
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
+/*
+    @GetMapping("/userById/{id}")
+    public User getUserById(@PathVariable int id) {
+        return userService.getUserById(id);
+    }*/
 
     @PostMapping("/addUser")
     public void addUser(@RequestBody User user) {
