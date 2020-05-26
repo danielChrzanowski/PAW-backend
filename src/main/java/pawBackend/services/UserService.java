@@ -31,6 +31,10 @@ public class UserService implements UserDetailsService {
         return userRepository.findById(id).orElse(null);
     }*/
 
+    public User getUserByLogin(String login) {
+        return userRepository.findByLogin(login);
+    }
+
     public void changePassword(User user) {
         int id = user.getUzytkownik_id();
         String newPassword = user.getPassword();
