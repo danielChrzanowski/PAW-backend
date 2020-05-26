@@ -27,6 +27,13 @@ public class UserService implements UserDetailsService {
         userRepository.save(user);
     }
 
+    public void changePassword(User user) {
+        int id = user.getUzytkownik_id();
+        String newPassword = user.getPassword();
+
+        userRepository.changePassword(id, newPassword);
+    }
+
     public void deleteUser(int id) {
         userRepository.deleteById(id);
     }

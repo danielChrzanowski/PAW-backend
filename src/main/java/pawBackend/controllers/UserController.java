@@ -24,6 +24,11 @@ public class UserController {
         userService.addUser(user);
     }
 
+    @PostMapping("/changePassword")
+    public void changePassword(@RequestBody User user) {
+        userService.changePassword(user);
+    }
+
     @DeleteMapping("/deleteUser/{id}")
     public void deleteUser(@PathVariable int id) {
         userService.deleteUser(id);

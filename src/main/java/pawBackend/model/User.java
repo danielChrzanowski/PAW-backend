@@ -22,7 +22,9 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer uzytkownik_id;
 
-    private String login, password;
+    private String login, password, imie, nazwisko, email;
+
+    private boolean czy_pracownik;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
