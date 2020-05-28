@@ -8,6 +8,6 @@ import pawBackend.model.LoggedUser;
 @Repository
 public interface LoggedUserRepository extends CrudRepository<LoggedUser, Integer> {
     @Query(value = "select u.uzytkownik_id, u.imie, u.nazwisko, u.email, u.czy_pracownik from uzytkownik u where u.uzytkownik_id like ?1", nativeQuery = true)
-    LoggedUser findByIdNoPassword(int id);
+    LoggedUser userByIdNoPassword(int id);
 
 }

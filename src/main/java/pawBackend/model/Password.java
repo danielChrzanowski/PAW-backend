@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "uzytkownik",schema = "sky-33_Daniel")
+@Table(name = "uzytkownik", schema = "sky-33_Daniel")
 public class Password {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

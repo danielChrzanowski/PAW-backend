@@ -10,7 +10,7 @@ public class LoggedUserService {
     @Autowired
     private LoggedUserRepository loggedUserRepository;
 
-    public LoggedUser getUserByIdNoPassword(int id) {
-        return loggedUserRepository.findByIdNoPassword(id);
+    public LoggedUser userByIdNoPassword(int id) {
+        return loggedUserRepository.userByIdNoPassword(id);
     }
 }

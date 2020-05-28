@@ -18,7 +18,7 @@ public class OrderController {
     OrderService orderService;
 
     @GetMapping("/getTodayOrders")
-    public List<Order> getAllOrders() {
+    public List<Order> getTodayOrders() {
         return orderService.getTodayOrders();
     }
 

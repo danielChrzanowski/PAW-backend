@@ -13,6 +13,8 @@ public class LoggedUserController {
     LoggedUserService loggedUserService;
 
     @GetMapping("/userByIdNoPassword/{id}")
-    public LoggedUser getUserByIdNoPassword(@PathVariable int id){return loggedUserService.getUserByIdNoPassword(id);}
+    public LoggedUser userByIdNoPassword(@PathVariable int id) {
+        return loggedUserService.userByIdNoPassword(id);
+    }
 
 }

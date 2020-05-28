@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "zamowienie",schema = "sky-33_Daniel")
+@Table(name = "zamowienie", schema = "sky-33_Daniel")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

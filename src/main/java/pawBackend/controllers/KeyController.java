@@ -13,5 +13,7 @@ public class KeyController {
     private Environment env;
 
     @GetMapping("/getKey")
-    public String getKey(){return env.getProperty("key");}
+    public String getKey() {
+        return env.getProperty("key");
+    }
 }

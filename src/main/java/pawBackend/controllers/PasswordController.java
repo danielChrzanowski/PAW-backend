@@ -1,10 +1,7 @@
 package pawBackend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pawBackend.model.Password;
 import pawBackend.services.PasswordService;
 
@@ -15,8 +12,12 @@ public class PasswordController {
     PasswordService passwordService;
 
     @GetMapping("/passwordById/{id}")
-    public Password getPasswordById(@PathVariable int id) {
-        return passwordService.getPasswordById(id);
+    public Password passwordById(@PathVariable int id) {
+        return passwordService.passwordById(id);
+    }
 
+    @PostMapping("/changePassword")
+    public void changePassword(@RequestBody Password password) {
+        passwordService.changePassword(password);
     }
 }

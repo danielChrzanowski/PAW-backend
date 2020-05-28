@@ -3,11 +3,9 @@ package pawBackend.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pawBackend.model.Order;
-import pawBackend.model.User;
 import pawBackend.repositories.OrderRepository;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -20,7 +18,8 @@ public class OrderService {
     public List<Order> getTodayOrders() {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        //System.out.println(formatter.format(date));
+        System.out.println(formatter.format(date));
+
         return orderRepository.getTodayOrders(formatter.format(date));
     }
 
@@ -49,8 +48,7 @@ public class OrderService {
                 break;
         }
 
-        losowy = random.nextInt(20-11+1)+11;
-
+        losowy = random.nextInt(20 - 11 + 1) + 11;
 
         orderRepository.changeState(losowy, state);
     }
