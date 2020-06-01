@@ -26,10 +26,30 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
+                //Key
+                .antMatchers("/getKey").authenticated()
+
+                //LoggedUserController
+                .antMatchers("/userByIdNoPassword/*").authenticated()
+
+                //OrderController
+                .antMatchers("/getTodayOrders").authenticated()
+                .antMatchers("/getClientOrders/*").authenticated()
+
+                //PasswordController
+                .antMatchers("/passwordById/*").authenticated()
+                .antMatchers("/changePassword").authenticated()
+
+                //UserController
+                .antMatchers("/addUser").authenticated()
+                .antMatchers("/deleteUser/*").authenticated()
+
+                //All
                 .antMatchers("/", "/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic();
+        http.cors();
     }
 
 }

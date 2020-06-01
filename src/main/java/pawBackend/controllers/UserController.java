@@ -19,18 +19,6 @@ public class UserController {
     }
 */
 
-/*
-    @GetMapping("/userById/{id}")
-    public User getUserById(@PathVariable int id) {
-        return userService.getUserById(id);
-    }
-*/
-
-    @GetMapping("/userByLogin/{login}")
-    public User userByLogin(@PathVariable String login) {
-        return userService.userByLogin(login);
-    }
-
     @PostMapping("/addUser")
     public void addUser(@RequestBody User user) {
         userService.addUser(user);

@@ -22,16 +22,6 @@ public class UserService implements UserDetailsService {
         }
 */
 
-    /*
-    public User getUserById(int id) {
-        return userRepository.findById(id).orElse(null);
-    }
-*/
-
-    public User userByLogin(String login) {
-        return userRepository.findByLogin(login);
-    }
-
     public void addUser(User user) {
         userRepository.save(user);
     }
