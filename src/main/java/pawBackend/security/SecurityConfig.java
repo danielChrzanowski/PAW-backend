@@ -41,7 +41,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/changePassword").authenticated()
 
                 //UserController
-                .antMatchers("/addUser").authenticated()
                 .antMatchers("/deleteUser/*").authenticated()
 
                 //All
