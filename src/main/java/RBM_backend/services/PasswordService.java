@@ -17,7 +17,6 @@ public class PasswordService {
     public void changePassword(Password password) {
         int id = password.getUzytkownik_id();
         String newPassword = password.getPassword();
-        System.out.println("DATA: " + id + " " + newPassword);
 
         passwordRepository.changePassword(id, newPassword);
     }

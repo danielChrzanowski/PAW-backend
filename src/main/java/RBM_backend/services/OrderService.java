@@ -18,7 +18,6 @@ public class OrderService {
     public List<Order> getTodayOrders() {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        System.out.println(formatter.format(date));
 
         return orderRepository.getTodayOrders(formatter.format(date));
     }
