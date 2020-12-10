@@ -14,14 +14,6 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
-/*
-        public List<User> getAllUsers() {
-            List<User> users = new ArrayList<>();
-            userRepository.findAll().forEach(users::add);
-            return users;
-        }
-*/
-
     public void addUser(User user) {
         userRepository.save(user);
     }
