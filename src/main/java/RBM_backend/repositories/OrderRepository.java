@@ -13,7 +13,7 @@ import java.util.List;
 public interface OrderRepository extends CrudRepository<Order, Integer> {
     //pokaz tylko dzisiejsze - do zmiany na to
     // @Query(value = "select * from zamowienie where data like ?1", nativeQuery = true)
-    @Query(value = "select * from zamowienie", nativeQuery = true)
+    @Query(value = "select * from zamowienie order by zamowienie_id desc", nativeQuery = true)
     List<Order> getTodayOrders(String date);
 
     @Query(value = "select * from zamowienie where uzytkownik_id = ?1 order by zamowienie_id desc limit 10", nativeQuery = true)
