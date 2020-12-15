@@ -28,11 +28,4 @@ public class OrderController {
         orderService.changeOrderState(order);
     }
 
-    /*
-    @GetMapping("/getTodayOrders")
-    public List<Order> getTodayOrders() {
-        return orderService.getTodayOrders();
-    }
-    */
-
 }

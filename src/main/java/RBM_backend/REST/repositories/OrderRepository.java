@@ -25,14 +25,4 @@ public interface OrderRepository extends CrudRepository<Order, Integer> {
     @Query(value = "UPDATE `zamowienie` SET `stan` = ?2 WHERE `zamowienie`.`zamowienie_id` = ?1", nativeQuery = true)
     void changeOrderState(int id, String newState);
 
-    /*
-    // @Query(value = "select * from zamowienie where data like ?1", nativeQuery = true)
-    @Query(value = "select * from zamowienie order by zamowienie_id desc", nativeQuery = true)
-    List<Order> getTodayOrders(String date);
-
-    @Transactional
-    @Modifying
-    @Query(value = "UPDATE `zamowienie` SET `stan` = ?2 WHERE `zamowienie`.`zamowienie_id` = ?1", nativeQuery = true)
-    void changeState(int id, String newPassword);
-    */
 }

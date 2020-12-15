@@ -13,7 +13,6 @@ public class OrderService {
     OrderRepository orderRepository;
 
     public List<Order> findAll() {
-        System.out.println("bbbbbbbbbbbbbbbbbbb");
         return orderRepository.findAll();
     }
 
