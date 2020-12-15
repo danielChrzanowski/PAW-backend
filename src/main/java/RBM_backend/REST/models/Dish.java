@@ -16,8 +16,5 @@ public class Dish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer danie_id;
-
     private String skladniki;
-
-
 }

@@ -17,13 +17,10 @@ import java.util.Collections;
 @Entity
 @Table(name = "uzytkownik")
 public class User implements UserDetails {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer uzytkownik_id;
-
     private String login, password, imie, nazwisko, email;
-
     private boolean czy_pracownik;
 
     @Override

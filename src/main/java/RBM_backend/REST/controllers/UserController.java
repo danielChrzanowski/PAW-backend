@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "https://localhost:4200")
 @RestController
 public class UserController {
-
     @Autowired
     private UserService userService;
 

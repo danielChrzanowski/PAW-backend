@@ -15,6 +15,5 @@ public class Password {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer uzytkownik_id;
-
     private String password;
 }

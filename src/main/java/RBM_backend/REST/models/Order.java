@@ -14,20 +14,16 @@ import java.util.Set;
 @Entity
 @Table(name = "zamowienie")
 public class Order {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer zamowienie_id;
-
-    private Integer uzytkownik_id;
-
-    private String data, stan;
-
-    private double suma_cen;
-
     @ManyToMany
     @JoinTable(
             name = "zamowienie_danie",
             joinColumns = @JoinColumn(name = "zamowienie_id"),
             inverseJoinColumns = @JoinColumn(name = "danie_id"))
-    Set<Dish> dishes=new HashSet<>();
+    Set<Dish> dania = new HashSet<>();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer zamowienie_id;
+    private Integer uzytkownik_id;
+    private String data, stan;
+    private double suma_cen;
 }

@@ -17,20 +17,21 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-   // @GetMapping("/getOrderDishes/{id}")
-   // public List<OrderDish> getOrderDishes(@PathVariable int id){return orderService.getOrderDishes(id);}
-
     @GetMapping("/findAll")
-    public List<Order> findAll(){return orderService.findAll();}
+    public List<Order> findAll() {
+        return orderService.findAll();
+    }
 
+    @GetMapping("/getClientOrders/{id}")
+    public List<Order> getOrderDishes(@PathVariable int id) {
+        return orderService.getClientOrders(id);
+    }
+
+    /*
     @GetMapping("/getTodayOrders")
     public List<Order> getTodayOrders() {
         return orderService.getTodayOrders();
     }
-
-    @GetMapping("/getClientOrders/{id}")
-    public List<Order> getClientOrders(@PathVariable int id) {
-        return orderService.getClientOrders(id);
-    }
+    */
 
 }
