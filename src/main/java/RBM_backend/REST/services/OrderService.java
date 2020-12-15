@@ -13,12 +13,29 @@ public class OrderService {
     OrderRepository orderRepository;
 
     public List<Order> findAll() {
+        System.out.println("bbbbbbbbbbbbbbbbbbb");
         return orderRepository.findAll();
     }
 
     public List<Order> getClientOrders(int id) {
         return orderRepository.getClientOrders(id);
     }
+
+    public void changeOrderState(Order order) {
+        int id=order.getZamowienie_id();
+        String newState=order.getStan();
+
+        orderRepository.changeOrderState(id, newState);
+    }
+
+    public Order findById(int id){
+        return orderRepository.findById(id);
+    }
+
+    /*
+    public void changeOrderState(int id, String newState) {
+        orderRepository.changeOrderState(id, newState);
+    }*/
 
     /*
     public List<Order> getTodayOrders() {

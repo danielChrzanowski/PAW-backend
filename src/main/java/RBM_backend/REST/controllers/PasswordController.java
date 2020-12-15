@@ -16,7 +16,7 @@ public class PasswordController {
         return passwordService.passwordById(id);
     }
 
-    @PostMapping("/changePassword")
+    @PutMapping("/changePassword")
     public void changePassword(@RequestBody Password password) {
         passwordService.changePassword(password);
     }
