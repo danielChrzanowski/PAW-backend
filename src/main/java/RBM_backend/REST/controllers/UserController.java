@@ -1,7 +1,7 @@
-package RBM_backend.tables.controllers;
+package RBM_backend.REST.controllers;
 
-import RBM_backend.tables.models.User;
-import RBM_backend.tables.services.UserService;
+import RBM_backend.REST.models.User;
+import RBM_backend.REST.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

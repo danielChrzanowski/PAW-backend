@@ -1,6 +1,6 @@
 package RBM_backend.security;
 
-import RBM_backend.tables.services.UserService;
+import RBM_backend.REST.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;

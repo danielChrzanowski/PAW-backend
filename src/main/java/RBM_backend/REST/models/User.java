@@ -1,4 +1,4 @@
-package RBM_backend.tables.models;
+package RBM_backend.REST.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

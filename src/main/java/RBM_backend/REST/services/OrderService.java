@@ -1,7 +1,7 @@
-package RBM_backend.tables.services;
+package RBM_backend.REST.services;
 
-import RBM_backend.tables.models.Order;
-import RBM_backend.tables.repositories.OrderRepository;
+import RBM_backend.REST.models.Order;
+import RBM_backend.REST.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

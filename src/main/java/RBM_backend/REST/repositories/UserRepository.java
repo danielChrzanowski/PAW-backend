@@ -1,6 +1,6 @@
-package RBM_backend.tables.repositories;
+package RBM_backend.REST.repositories;
 
-import RBM_backend.tables.models.User;
+import RBM_backend.REST.models.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

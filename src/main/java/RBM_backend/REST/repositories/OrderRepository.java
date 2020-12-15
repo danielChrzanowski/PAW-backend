@@ -1,6 +1,6 @@
-package RBM_backend.tables.repositories;
+package RBM_backend.REST.repositories;
 
-import RBM_backend.tables.models.Order;
+import RBM_backend.REST.models.Order;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -11,10 +11,7 @@ import java.util.List;
 
 @Repository
 public interface OrderRepository extends CrudRepository<Order, Integer> {
-   // @Query(value = "select * from zamowienie_danie where zamowienie_id=?1", nativeQuery = true)
-   // List<OrderDish> getOrderDishes(int id);
 
-    //@Query(value = "select * from zamowienie z inner join z.zamowienie_id order by zamowienie_id desc", nativeQuery = true)
     List<Order> findAll();
 
     //pokaz tylko dzisiejsze - do zmiany na to

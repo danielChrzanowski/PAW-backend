@@ -1,7 +1,7 @@
-package RBM_backend.tables.services;
+package RBM_backend.REST.services;
 
-import RBM_backend.tables.models.Password;
-import RBM_backend.tables.repositories.PasswordRepository;
+import RBM_backend.REST.models.Password;
+import RBM_backend.REST.repositories.PasswordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

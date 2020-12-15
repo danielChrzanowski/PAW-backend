@@ -1,7 +1,7 @@
-package RBM_backend.tables.controllers;
+package RBM_backend.REST.controllers;
 
-import RBM_backend.tables.models.Order;
-import RBM_backend.tables.services.OrderService;
+import RBM_backend.REST.models.Order;
+import RBM_backend.REST.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

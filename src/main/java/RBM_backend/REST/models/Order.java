@@ -1,10 +1,7 @@
-package RBM_backend.tables.models;
+package RBM_backend.REST.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -16,10 +13,6 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "zamowienie")
-/*
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "zamowienie_id")*/
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +24,6 @@ public class Order {
 
     private double suma_cen;
 
-   // @JsonBackReference
     @ManyToMany
     @JoinTable(
             name = "zamowienie_danie",
