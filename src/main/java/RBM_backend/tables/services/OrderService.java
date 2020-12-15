@@ -1,7 +1,7 @@
-package RBM_backend.services;
+package RBM_backend.tables.services;
 
-import RBM_backend.model.Order;
-import RBM_backend.repositories.OrderRepository;
+import RBM_backend.tables.models.Order;
+import RBM_backend.tables.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +14,12 @@ import java.util.Random;
 public class OrderService {
     @Autowired
     OrderRepository orderRepository;
+
+    //public List<OrderDish> getOrderDishes(int id){return orderRepository.getOrderDishes(id);}
+
+    public List<Order> findAll(){
+        return orderRepository.findAll();
+    }
 
     public List<Order> getTodayOrders() {
         Date date = new Date();

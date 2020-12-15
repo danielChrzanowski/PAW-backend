@@ -1,7 +1,7 @@
-package RBM_backend.controllers;
+package RBM_backend.tables.controllers;
 
-import RBM_backend.model.Order;
-import RBM_backend.services.OrderService;
+import RBM_backend.tables.models.Order;
+import RBM_backend.tables.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +16,12 @@ import java.util.List;
 public class OrderController {
     @Autowired
     OrderService orderService;
+
+   // @GetMapping("/getOrderDishes/{id}")
+   // public List<OrderDish> getOrderDishes(@PathVariable int id){return orderService.getOrderDishes(id);}
+
+    @GetMapping("/findAll")
+    public List<Order> findAll(){return orderService.findAll();}
 
     @GetMapping("/getTodayOrders")
     public List<Order> getTodayOrders() {

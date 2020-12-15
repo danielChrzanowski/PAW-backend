@@ -1,7 +1,7 @@
-package RBM_backend.services;
+package RBM_backend.tables.services;
 
-import RBM_backend.model.User;
-import RBM_backend.repositories.UserRepository;
+import RBM_backend.tables.models.User;
+import RBM_backend.tables.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

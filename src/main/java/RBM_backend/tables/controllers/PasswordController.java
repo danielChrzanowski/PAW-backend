@@ -1,7 +1,7 @@
-package RBM_backend.controllers;
+package RBM_backend.tables.controllers;
 
-import RBM_backend.model.Password;
-import RBM_backend.services.PasswordService;
+import RBM_backend.tables.models.Password;
+import RBM_backend.tables.services.PasswordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

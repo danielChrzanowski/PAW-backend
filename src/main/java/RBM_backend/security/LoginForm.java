@@ -1,4 +1,4 @@
-package RBM_backend.model;
+package RBM_backend.security;
 
 import lombok.Data;
 

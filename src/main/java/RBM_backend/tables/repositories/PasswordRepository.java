@@ -1,6 +1,6 @@
-package RBM_backend.repositories;
+package RBM_backend.tables.repositories;
 
-import RBM_backend.model.Password;
+import RBM_backend.tables.models.Password;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

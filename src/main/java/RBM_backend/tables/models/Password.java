@@ -1,4 +1,4 @@
-package RBM_backend.model;
+package RBM_backend.tables.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,15 +10,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "zamowienie")
-public class Order {
+@Table(name = "uzytkownik")
+public class Password {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer zamowienie_id;
-
     private Integer uzytkownik_id;
 
-    private String data, stan;
-
-    private double suma_cen;
+    private String password;
 }
