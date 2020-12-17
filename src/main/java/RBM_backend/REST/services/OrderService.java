@@ -21,13 +21,13 @@ public class OrderService {
     }
 
     public void changeOrderState(Order order) {
-        int id=order.getZamowienie_id();
-        String newState=order.getStan();
+        int id = order.getZamowienie_id();
+        String newState = order.getStan();
 
         orderRepository.changeOrderState(id, newState);
     }
 
-    public Order findById(int id){
+    public Order findById(int id) {
         return orderRepository.findById(id);
     }
 

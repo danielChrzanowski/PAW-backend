@@ -5,8 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -19,7 +18,7 @@ public class Order {
             name = "zamowienie_danie",
             joinColumns = @JoinColumn(name = "zamowienie_id"),
             inverseJoinColumns = @JoinColumn(name = "danie_id"))
-    Set<Dish> dania = new HashSet<>();
+    List<Dish> dania;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer zamowienie_id;

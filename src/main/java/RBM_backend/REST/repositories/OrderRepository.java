@@ -1,7 +1,6 @@
 package RBM_backend.REST.repositories;
 
 import RBM_backend.REST.models.Order;
-import RBM_backend.REST.models.Password;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -17,7 +16,7 @@ public interface OrderRepository extends CrudRepository<Order, Integer> {
 
     Order findById(int id);
 
-    @Query(value = "select * from zamowienie where uzytkownik_id = ?1 order by zamowienie_id desc limit 10", nativeQuery = true)
+    @Query(value = "select * from zamowienie where uzytkownik_id = ?1 order by zamowienie_id desc limit 100", nativeQuery = true)
     List<Order> getClientOrders(int id);
 
     @Transactional
