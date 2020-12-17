@@ -23,7 +23,9 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer zamowienie_id;
-    private Integer uzytkownik_id;
+    @ManyToOne
+    @JoinColumn(name = "uzytkownik_id")
+    private User uzytkownik;
     private String data, stan;
     private double suma_cen;
 }

@@ -16,6 +16,6 @@ public class Dish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer danie_id;
-    private String skladniki, kategoria;
+    private String nazwa, skladniki, kategoria;
     private Double cena;
 }

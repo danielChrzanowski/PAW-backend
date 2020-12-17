@@ -1,5 +1,6 @@
 package RBM_backend.REST.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -22,6 +24,7 @@ public class User implements UserDetails {
     private Integer uzytkownik_id;
     private String login, password, imie, nazwisko, email;
     private boolean czy_pracownik;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
