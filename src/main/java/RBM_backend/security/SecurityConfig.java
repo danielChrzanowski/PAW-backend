@@ -28,8 +28,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 //Restrict
                 .antMatchers("/getKey",
-                        "/userByIdNoPassword/*",
-                        "/getTodayOrders",
+                        "/findAllOrders",
+                        "/changeOrderState",
+                        "/getClientOrders",
                         "/getClientOrders/*",
                         "/passwordById/*",
                         "/changePassword",
