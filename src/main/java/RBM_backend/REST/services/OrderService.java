@@ -30,19 +30,4 @@ public class OrderService {
     public Order findById(int id) {
         return orderRepository.findById(id);
     }
-
-    /*
-    public void changeOrderState(int id, String newState) {
-        orderRepository.changeOrderState(id, newState);
-    }*/
-
-    /*
-    public List<Order> getTodayOrders() {
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-
-        return orderRepository.getTodayOrders(formatter.format(date));
-    }
-    */
-
 }

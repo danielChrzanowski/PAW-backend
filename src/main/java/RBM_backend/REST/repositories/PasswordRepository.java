@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface PasswordRepository extends CrudRepository<Password, Integer> {
-    // @Query("select password from uzytkownik where uzytkownik_id=?1")
     Password findById(int id);
 
     @Transactional
