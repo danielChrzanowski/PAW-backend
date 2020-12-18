@@ -11,9 +11,9 @@ public class PasswordController {
     @Autowired
     PasswordService passwordService;
 
-    @GetMapping("/passwordById/{id}")
-    public Password passwordById(@PathVariable int id) {
-        return passwordService.passwordById(id);
+    @GetMapping("/checkPasswordInDB/{id}")
+    public boolean passwordById(@PathVariable int id, @RequestParam String password) {
+        return passwordService.passwordById(id, password);
     }
 
     @PutMapping("/changePassword")

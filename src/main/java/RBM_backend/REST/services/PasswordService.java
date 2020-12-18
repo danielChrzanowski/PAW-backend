@@ -3,6 +3,7 @@ package RBM_backend.REST.services;
 import RBM_backend.REST.models.Password;
 import RBM_backend.REST.repositories.PasswordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +12,8 @@ public class PasswordService {
     @Autowired
     PasswordRepository passwordRepository;
 
-    public Password passwordById(int id) {
-        return passwordRepository.findById(id);
+    public boolean passwordById(int id, String password) {
+        return BCrypt.checkpw(password, passwordRepository.findById(id).getPassword());
     }
 
     public void changePassword(Password password) {
