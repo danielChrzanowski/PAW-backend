@@ -18,4 +18,6 @@ public class Dish {
     private Integer danie_id;
     private String nazwa, skladniki, kategoria;
     private Double cena;
+    private Integer kalorie;
+    private byte[] zdjecie;
 }
