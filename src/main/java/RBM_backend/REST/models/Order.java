@@ -25,6 +25,6 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "uzytkownik_id")
     private User uzytkownik;
-    private String data, stan;
+    private String data, stan, adres, telefon;
     private double suma_cen;
 }
