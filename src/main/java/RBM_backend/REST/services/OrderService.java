@@ -30,4 +30,8 @@ public class OrderService {
     public Order findById(int id) {
         return orderRepository.findById(id);
     }
+
+    public void addOrder(Order order){
+        orderRepository.save(order);
+    }
 }

@@ -28,4 +28,9 @@ public class OrderController {
         orderService.changeOrderState(order);
     }
 
+    @PostMapping("/addOrder")
+    public void addOrder(@RequestBody Order order){
+        orderService.addOrder(order);
+    }
+
 }
