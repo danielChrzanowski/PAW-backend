@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @CrossOrigin(origins = "https://localhost:4200")
 @RestController
@@ -22,8 +21,9 @@ public class DishController {
         return dishService.findAll();
     }
 
-    @GetMapping("/findDish/{id}")
-    public Optional<Dish> findDish(@PathVariable int id) {
-        return dishService.findDish(id);
+    @GetMapping("/recommendDishes/{id}")
+    public List<Dish> recommendDishes(@PathVariable int id) {
+        return dishService.recommendDishes(id);
     }
+
 }

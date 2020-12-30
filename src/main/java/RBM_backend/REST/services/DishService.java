@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class DishService {
@@ -17,7 +16,7 @@ public class DishService {
         return dishRepository.findAll();
     }
 
-    public Optional<Dish> findDish(int id) {
-        return dishRepository.findById(id);
+    public List<Dish> recommendDishes(int id) {
+        return dishRepository.recommendDishes(id);
     }
 }
