@@ -14,8 +14,6 @@ public interface OrderRepository extends CrudRepository<Order, Integer> {
     @Query(value = "select * from zamowienie order by zamowienie_id desc limit 100", nativeQuery = true)
     List<Order> findAll();
 
-    Order findById(int id);
-
     @Query(value = "select * from zamowienie where uzytkownik_id = ?1 order by zamowienie_id desc limit 100", nativeQuery = true)
     List<Order> getClientOrders(int id);
 

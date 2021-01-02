@@ -27,12 +27,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 //Restrict
-                .antMatchers("/getKey",
+                .antMatchers("/recommendDishes/*",
                         "/findAllOrders",
-                        "/changeOrderState",
-                        "/getClientOrders",
                         "/getClientOrders/*",
-                        "/passwordById/*",
+                        "/changeOrderState",
+                        "/addOrder",
                         "/changePassword",
                         "/deleteUser/*").authenticated()
                 //Allow

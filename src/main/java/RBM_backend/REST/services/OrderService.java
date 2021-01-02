@@ -27,11 +27,7 @@ public class OrderService {
         orderRepository.changeOrderState(id, newState);
     }
 
-    public Order findById(int id) {
-        return orderRepository.findById(id);
-    }
-
-    public void addOrder(Order order){
+    public void addOrder(Order order) {
         orderRepository.save(order);
     }
 }

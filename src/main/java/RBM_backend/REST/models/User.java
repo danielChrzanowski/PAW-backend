@@ -23,7 +23,6 @@ public class User implements UserDetails {
     private String login, password, imie, nazwisko, email;
     private boolean czy_pracownik;
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));

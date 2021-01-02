@@ -11,7 +11,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "danie")
-
 public class Dish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

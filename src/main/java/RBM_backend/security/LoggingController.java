@@ -16,7 +16,6 @@ public class LoggingController {
     @Autowired
     UserService userService;
 
-
     @PostMapping("/login")
     public boolean login(@RequestBody LoginForm loginForm) {
         UserDetails user = userService.loadUserByUsername(loginForm.getUsername());
