@@ -19,4 +19,8 @@ public class DishService {
     public List<Dish> recommendDishes(int id) {
         return dishRepository.recommendDishes(id);
     }
+
+    public void addDish(Dish dish) {
+        dishRepository.save(dish);
+    }
 }
