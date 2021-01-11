@@ -9,10 +9,10 @@ import java.util.List;
 public interface DishRepository extends CrudRepository<Dish, Integer> {
     List<Dish> findAll();
 
-    @Query(value = "SELECT distinct danie_id, nazwa, skladniki,\n" +
+    @Query(value = "SELECT danie_id, nazwa, skladniki,\n" +
             "kategoria, cena, kalorie, zdjecie FROM rbm.danie\n" +
-            " join zamowienie_danie using(danie_id) \n" +
-            " join zamowienie using(zamowienie_id)\n" +
-            "where uzytkownik_id=?1 order by rand() limit 4;", nativeQuery = true)
+            " JOIN zamowienie_danie using(danie_id) \n" +
+            " JOIN zamowienie using(zamowienie_id)\n" +
+            "WHERE uzytkownik_id=?1 GROUP BY danie_id ORDER BY count(danie_id) DESC LIMIT 4", nativeQuery = true)
     List<Dish> recommendDishes(int id);
 }
